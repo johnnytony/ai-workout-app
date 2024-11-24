@@ -1,0 +1,8 @@
+fastapi==0.115.5
+pydantic==2.10.1
+python-dotenv==1.0.1
+qdrant-client==1.12.1
+uvicorn==0.32.1
+fastapi-cli==0.0.5
+boto3==1.35.68
+pandas==2.2.3

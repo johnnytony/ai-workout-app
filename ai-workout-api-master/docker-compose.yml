@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: api
+    build:
+      context: . # Use the current directory for building the Docker image
+      dockerfile: Dockerfile # Specify the Dockerfile
+    ports:
+      - "8080:8080" # Map host port 8080 to container port 8080
+    volumes:
+      - .:/app # Mount the current directory to /app in the container
+    depends_on:
+      - qdrant # Ensures Qdrant starts before the app
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8080
+
+  qdrant:
+    container_name: qdrant
+    image: qdrant/qdrant:v1.5.1 # Specify the Qdrant image version
+    restart: always # Ensure the container restarts if it stops
+    ports:
+      - "6333:6333" # Expose Qdrant's default port
+    volumes:
+      - qdrant-data:/qdrant/storage # Persistent storage for Qdrant
+
+volumes:
+  qdrant-data: # Define a named volume for Qdrant
