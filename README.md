@@ -46,4 +46,24 @@ Frontend app enables the user to create new workout plans based on its preferenc
 
 The app enables both mobile and web experience since it is a react-native application.
 
+### Step by step guide 
+
 You can try and test generating workout plans with this [url](http://35.166.146.235:8081/).
+
+Access the [url](http://35.166.146.235:8081/) and choose from the available options that best fit your preferences and goals.
+
+<image src="https://github.com/user-attachments/assets/b5a217ef-e76d-42ab-a82b-b303e1777ec5" style="height: 350px">
+</image>
+
+Click to generate the workout plan and check the results.
+
+<image src="https://github.com/user-attachments/assets/6256f234-0ffc-4037-8866-577136212142" style="height: 350px">
+</image>
+
+
+
+
+
+
+
+
